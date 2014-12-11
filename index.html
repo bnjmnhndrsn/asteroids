@@ -20,9 +20,9 @@
 <div id="holder">
 	<iframe style="display:none" src="http://www.youtube.com/embed/2xjJXT0C0X4?enablejsapi=1&loop=1&start=20" frameborder="0" allowfullscreen id="player"></iframe>
 	
-	<div id="corner-buttons">
-		<div id="pause" class="corner-button" style="background-image: url('images/glyphicons-175-pause.png'); display:none"></div>
-		<div id="music" class="corner-button" style="background-image: url('images/glyphicons-183-mute.png')"></div>
+	<div id="corner-buttons" style="display:none">
+		<div id="pause" class="corner-button" style="background-image: url('images/glyphicons-175-pause.png');"></div>
+		<div id="music" class="corner-button" style="background-image: url('images/glyphicons-185-volume-up.png')"></div>
 	</div>
 	<div id="play">
 		<div class="text">
@@ -101,7 +101,7 @@
 		var $play = $("#play");
 		$("#play button").click(function(){
 		  $play.hide();
-		  $pause.show();
+		  $("#corner-buttons").show();
 		  gameView.start(playAgain);
 		  player.playVideo();
 		  $(this).off("click");
