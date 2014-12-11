@@ -1,11 +1,41 @@
+body {
+	font-family: arial;
+}
+
+#corner-buttons {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.corner-button {
+	float: left;
+	border: none;
+	background: transparent center no-repeat;
+	height: 40px;
+	width: 40px;
+	padding: 0px;
+	cursor: pointer;
+}
+
 #holder {
 	position: relative;
 	width: 800px;
 	height: 600px;
+	background-color: lightblue;
 }
 
-#music {
+
+
+#play {
 	position: absolute;
-	top: 5px;
-	right: 5px;
+	top: 25%;
+	left: 50px;
+	width: 700px;
+	text-align: center;
+}
+
+.title {
+	font-family: impact;
+	font-style: italic;
 }
