@@ -1,6 +1,9 @@
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
 	<title>The Emoji Avenger</title>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="vendor/keymaster.js"></script>
 	<script src='lib/util.js'></script>
 	<script src='lib/movingObject.js'></script>
@@ -10,9 +13,45 @@
 	<script src='lib/game.js'></script>
 	<script src='lib/gameView.js'></script>
 	<script src='lib/hero.js'></script>
+	<script src='lib/lives.js'></script>
 </head>
 <body>
-  <canvas id="game-canvas" width="800" height="600" style="border: 1px solid black"></canvas>
+    
+
+<div id="holder">
+	<iframe style="display:none" src="http://www.youtube.com/embed/2xjJXT0C0X4?enablejsapi=1&autoplay=1&loop=1&start=20" frameborder="0" allowfullscreen id="player"></iframe>
+	<div id="music"><button>Stop/Play</button></div>
+	<canvas id="game-canvas" width="800" height="600" style="border: 1px solid black">
+	  CANVAS FAIL
+	</canvas>
+</div>
+  <script>
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        events: {
+          'onReady': onPlayerReady
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+		$("#music button").click(function(){
+			var state = player.getPlayerState();
+			if (state == 1) {
+				player.pauseVideo();
+			} else {
+				player.playVideo();
+			}
+		});
+    }
+
+  </script>
+  
   <script>
   var canvas = document.getElementById("game-canvas");
   var gameView = new EmojiA.GameView(canvas);

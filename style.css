@@ -1,0 +1,11 @@
+#holder {
+	position: relative;
+	width: 800px;
+	height: 600px;
+}
+
+#music {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
