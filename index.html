@@ -2,7 +2,7 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>The Emoji Avenger</title>
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="vendor/jquery.js"></script>
 	<script src="vendor/keymaster.js"></script>
 	<script src='lib/util.js'></script>
 	<script src='lib/movingObject.js'></script>
@@ -33,7 +33,7 @@
 		</div>
 		<button>Play</button>
 	</div>
-	<canvas id="game-canvas" width="800" height="600" style="border: 1px solid black">
+	<canvas id="game-canvas" width="800" height="600">
 	  CANVAS FAIL
 	</canvas>
 </div>
@@ -105,7 +105,7 @@
 		  $play.hide();
 		  $("#corner-buttons").show();
 		  gameView.start(playAgain);
-		  player.playVideo();
+		  player && player.playVideo();
 		  $(this).off("click");
 		});
 	</script>
