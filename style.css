@@ -39,10 +39,15 @@ body {
 
 }
 
+#play p, #play h1, #play h2 {
+	margin-bottom: 20px;
+}
+
 #play button{
 	font-size: 150%;
 	background-color: transparent;
 	border-color: black;
+	padding: 5px;
 	border-radius: 5px;
 	box-shadow: 1px 1px rgba(0,0,0,.5);
 }
