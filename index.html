@@ -24,7 +24,7 @@
 	
 	<div id="corner-buttons" style="display:none">
 		<div id="pause" class="corner-button" style="background-image: url('images/glyphicons-175-pause.png');"></div>
-		<div id="music" class="corner-button" style="background-image: url('images/glyphicons-185-volume-up.png')"></div>
+		<div id="music" class="corner-button" style="background-image: url('images/glyphicons-183-mute.png')"></div>
 	</div>
 	<div id="play">
 		<div class="text">
@@ -65,9 +65,6 @@
 	    }
 
 	    function onPlayerReady(event) {
-			if (gameView && gameView.isPlaying()){
-				player.playVideo();
-			}
 		
 			$music.click(function(){
 				var state = player.getPlayerState();
@@ -105,7 +102,6 @@
 		  $play.hide();
 		  $("#corner-buttons").show();
 		  gameView.start(playAgain);
-		  player && player.playVideo();
 		  $(this).off("click");
 		});
 	</script>
