@@ -18,6 +18,9 @@ body {
 	cursor: pointer;
 }
 
+html {
+	height: 2000px;
+}
 #holder {
 	position: relative;
 	width: 800px;
