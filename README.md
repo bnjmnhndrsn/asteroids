@@ -1,1 +1,1 @@
-Emojis destroying other emojis with rainbows. Built with HTML canvas and JS. [Here's the version so far.](http://rawgit.com/bnjmnhndrsn/emoji_avenger/master/index.html)
+You are the Emoji Avenger, banishing the forces of unhappiness from the sky with your rainbow tail! Built with HTML Canvas and JS. [Here's the version so far.](http://rawgit.com/bnjmnhndrsn/emoji_avenger/master/index.html)
